@@ -3,7 +3,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/register">Register</router-link> | 
-      <router-link to="/todo">TodoList</router-link> | 
+      <router-link to="/list">TodoList</router-link> | 
+      <router-link to="/add">Add One Todo</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>

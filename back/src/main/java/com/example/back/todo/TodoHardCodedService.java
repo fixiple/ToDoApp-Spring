@@ -22,5 +22,14 @@ public class TodoHardCodedService {
     public List<Todo> findAll() {
       return todosList;
     }
+
+    public void addOne(Todo todo){
+        todosList.add(todo);
+    }
+
+    public Todo modifyOne(int index, Todo todo){
+        Todo todoModify = todosList.get(index);
+        todo = todoModify;
+    }
 }
 

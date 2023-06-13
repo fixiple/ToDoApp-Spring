@@ -4,6 +4,8 @@ import AboutView from '../views/AboutView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import TodoListView from '../views/TodoListView.vue'
+import AddTodoView from '../views/AddTodoView.vue'
+import ModifyTodoView from '../views/ModifyView.vue'
 
 const routes = [
   {
@@ -22,9 +24,19 @@ const routes = [
     component: RegisterView
   },
   {
-    path: '/todo',
-    name: 'todo',
+    path: '/list',
+    name: 'list',
     component: TodoListView
+  },
+  {
+    path: '/add',
+    name: 'AddTodoView',
+    component: AddTodoView
+  },
+  {
+    path: '/edit',
+    name: 'edit',
+    component: ModifyTodoView
   },
   {
     path: '/about',

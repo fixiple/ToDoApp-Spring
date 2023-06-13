@@ -36,6 +36,7 @@ public class Todo {
 
     public Todo() {
         this.id=counter+=1L;
+        this.created_at = currentTime();
     }
 
     public Todo(String title, String description, boolean finished) {
