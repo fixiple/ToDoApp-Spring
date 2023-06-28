@@ -18,7 +18,12 @@
                     <td>{{todo.description}}</td>
                     <td>{{todo.created_at}}</td>
                     <td>{{todo.finished ? '✅' : '❌'}} </td>
-                    <td><button @click="$router.push('edit')">Edit</button></td>
+                    <td><button><router-link
+                        :to="{name: 'edit', params: { id: todo.id}}" 
+                        >Edit</router-link></button>
+                    </td>
+                    <td><button @click="deleteTodo(todo.id)">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -41,6 +46,14 @@ export default {
             .then(response => {
             this.todos=response.data;
             });
+        }, 
+        deleteTodo(id) {
+            TodoDataService.DeleteTodoItem(id)
+            .then(()=>{
+                //after a todo has been deleted, we refresh the list
+                this.refreshTodos();
+            })
+            
         }
     },
     created() {

@@ -32,6 +32,7 @@ back/build/
 !**/back/src/test/**/build/
 
 ### VS Code ###
+.vscode/
 back/.vscode/
 back/.gitignore
 front/.gitignore
