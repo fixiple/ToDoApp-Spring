@@ -30,6 +30,7 @@ public class TodoHardCodedService {
     public Todo modifyOne(int index, Todo todo){
         Todo todoModify = todosList.get(index);
         todo = todoModify;
+        return todo;
     }
 }
 

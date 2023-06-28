@@ -34,7 +34,7 @@ const routes = [
     component: AddTodoView
   },
   {
-    path: '/edit',
+    path: '/:id/edit',
     name: 'edit',
     component: ModifyTodoView
   },
